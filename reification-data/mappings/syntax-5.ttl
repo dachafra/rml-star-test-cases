@@ -1,0 +1,322 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix ex: <http://example/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/> .
+@base <http://example.org/> .
+:elementaryTM1 a rml:TriplesMap ; # This refers to object a in the rdf-star
+    rml:logicalSource [
+        rml:source "data.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+    # Done
+
+    rml:subjectMap [
+        rml:reference "elementaryTM1Variable" ;
+        rr:termType rr:BlankNode
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rml:objectMap [
+            rml:reference rdf:Statement
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rml:objectMap [
+            rr:template "http://example/{c1}"
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rml:objectMap [
+            rr:constant ex:p1
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rml:objectMap [
+            rr:template "http://example/{c3}"
+        ]
+    ]; .
+    # Done
+
+:elementaryTM2 a rml:TriplesMap ; # This refers to object c in the rdf-star
+    rml:logicalSource [
+        rml:source "data.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+    # Done
+
+    rml:subjectMap [
+        rml:reference "elementaryTM2Variable" ;
+        rr:termType rr:BlankNode
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rml:objectMap [
+            rml:reference rdf:Statement
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rml:objectMap [
+            rr:template "http://example/{c5}"
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rml:objectMap [
+            rr:constant ex:p2
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rml:objectMap [
+            rr:template "http://example/{c7}"
+        ]
+    ]; .
+    # Done
+
+:joinTM1 a rml:TriplesMap ; # This refers to object b in the rdf-star
+    rml:logicalSource [
+        rml:source "data.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+    # Done
+
+    rml:subjectMap [
+        rml:reference "JoinTM1Variable" ;
+        rr:termType rr:BlankNode
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rml:objectMap [
+            rml:reference rdf:Statement
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rml:objectMap [
+            rr:parentTriplesMap :elementaryTM1
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rml:objectMap [
+            rr:constant ex:q1
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rml:objectMap [
+            rr:parentTriplesMap :elementaryTM2
+        ]
+    ]; .
+    # Done
+
+:elementaryTM3 a rml:TriplesMap ; # This refers to object e in the rdf-star
+    rml:logicalSource [
+        rml:source "data.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+    # Done
+
+    rml:subjectMap [
+        rml:reference "elementaryTM2Variable" ;
+        rr:termType rr:BlankNode
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rml:objectMap [
+            rml:reference rdf:Statement
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rml:objectMap [
+            rr:template "http://example/{c9}"
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rml:objectMap [
+            rr:constant ex:p3
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rml:objectMap [
+            rr:template "http://example/{c11}"
+        ]
+    ]; .
+    # Done
+
+:elementaryTM4 a rml:TriplesMap ; # This refers to object g in the rdf-star
+    rml:logicalSource [
+        rml:source "data.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+    # Done
+
+    rml:subjectMap [
+        rml:reference "elementaryTM4Variable" ;
+        rr:termType rr:BlankNode
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rml:objectMap [
+            rml:reference rdf:Statement
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rml:objectMap [
+            rr:template "http://example/{c13}"
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rml:objectMap [
+            rr:constant ex:p4
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rml:objectMap [
+            rr:template "http://example/{c15}"
+        ]
+    ]; .
+    # Done
+
+:joinTM2 a rml:TriplesMap ; # This refers to object f in the rdf-star
+    rml:logicalSource [
+        rml:source "data.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+    # Done
+
+    rml:subjectMap [
+        rml:reference "JoinTM2Variable" ;
+        rr:termType rr:BlankNode
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rml:objectMap [
+            rml:reference rdf:Statement
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rml:objectMap [
+            rr:parentTriplesMap :elementaryTM3
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rml:objectMap [
+            rr:constant ex:q3
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rml:objectMap [
+            rr:parentTriplesMap :elementaryTM4
+        ]
+    ]; .
+    # Done
+
+:innerJoin a rml:TriplesMap ; # This refers to object f in the rdf-star
+    rml:logicalSource [
+        rml:source "data.csv";
+        rml:referenceFormulation ql:CSV
+    ];
+    # Done
+
+    rml:subjectMap [
+        rml:reference "innerJoinVariable" ;
+        rr:termType rr:BlankNode
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rml:objectMap [
+            rml:reference rdf:Statement
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:subject ;
+        rml:objectMap [
+            rr:parentTriplesMap :joinTM1
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:predicate ;
+        rml:objectMap [
+            rr:constant ex:q2
+        ]
+    ];
+    # Done
+
+    rr:predicateObjectMap [
+        rr:predicate rdf:object ;
+        rml:objectMap [
+            rr:parentTriplesMap :joinTM2
+        ]
+    ]; .
+    # Done

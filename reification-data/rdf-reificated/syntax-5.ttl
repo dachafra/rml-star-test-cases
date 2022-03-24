@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+_:a rdf:type rdf:Statement .
+_:a rdf:subject <http://example/s1> .
+_:a rdf:predicate <http://example/p1> .
+_:a rdf:object <http://example/o1> .
+
+_:b rdf:type rdf:Statement .
+_:b rdf:subject _:a .
+_:b rdf:predicate <http://example/q1> .
+_:b rdf:object _:c .
+
+_:c rdf:type rdf:Statement .
+_:c rdf:subject <http://example/s2> .
+_:c rdf:predicate <http://example/p2> .
+_:c rdf:object <http://example/o2> .
+
+_:b <http://example/q2> _:f .
+
+_:e rdf:type rdf:Statement .
+_:e rdf:subject <http://example/s3> .
+_:e rdf:predicate <http://example/p3> .
+_:e rdf:object <http://example/o3> .
+
+_:f rdf:type rdf:Statement .
+_:f rdf:subject _:e .
+_:f rdf:predicate <http://example/q3> .
+_:f rdf:object _:g .
+
+_:g rdf:type rdf:Statement .
+_:g rdf:subject <http://example/s4> .
+_:g rdf:predicate <http://example/p4> .
+_:g rdf:object <http://example/o4> .

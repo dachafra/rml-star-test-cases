@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+_:x rdf:type rdf:Statement .
+_:x rdf:subject <http://example/s1> .
+_:x rdf:predicate <http://example/p1> .
+_:x rdf:object <http://example/o1> .
+
+_:x <http://example/q> _:z .
+
+_:z rdf:type rdf:Statement .
+_:z rdf:subject <http://example/s2> .
+_:z rdf:predicate <http://example/p2> .
+_:z rdf:object <http://example/o2> .

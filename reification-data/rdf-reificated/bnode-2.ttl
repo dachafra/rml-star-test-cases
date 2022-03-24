@@ -1,0 +1,6 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+_:x rdf:type rdf:Statement .
+_:x rdf:subject <http://example/s> .
+_:x rdf:predicate <http://example/p> .
+_:x rdf:object _:b1 .
+_:x <http://example/q> "456"^^<http://www.w3.org/2001/XMLSchema#integer> .
