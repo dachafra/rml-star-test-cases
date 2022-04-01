@@ -46,7 +46,7 @@
     rr:predicateObjectMap [
         rr:predicate rdf:object ;
         rml:objectMap [
-            rml:reference "c3";
+            rml:reference "c2";
             rr:termType rr:BlankNode
         ]
     ];
@@ -55,7 +55,7 @@
     rr:predicateObjectMap [
         rr:predicate ex:q ;
         rml:objectMap [
-            rml:reference "c5" ;
+            rml:reference "c3" ;
             rr:datatype xsd:integer
         ]
     ]; .
